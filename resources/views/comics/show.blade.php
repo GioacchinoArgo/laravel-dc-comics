@@ -1,19 +1,19 @@
 @extends('layouts.main')
 
-@section('title', 'dettaglio prodotto')
+@section('title', $comic->title)
 
 @section('main-content')
     <section id="product-description" class="container">
         <div class="wrapper container">
             <div class="card-container">
                 <div class="comics-card">
-                    <img class="comic-image" src="{{ $show['thumb'] }}" alt="{{ $show['title'] }}">
+                    <img class="comic-image" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                 </div>
             </div>
             <div class="details">
                 <div class="info-comics">
-                    <h1> {{ $show['title']}} </h1>
-                    <p class="description">{{$show['description']}}</p>
+                    <h1> {{ $comic->title}} </h1>
+                    <p class="description">{{$comic->description}}</p>
                 </div>
                 <div class="banner-adv">
                     <img class="adv" src="{{ asset('img/adv.jpg') }}">
@@ -23,49 +23,6 @@
     </section>
     <section id="info-section">
         <div class="wrapper container">
-            <div class="talent container">
-                <h1>Talent</h1>
-                <div class="d-flex">
-                    <div class="row">
-                        <div class="col">
-                            <p>Art by:</p>
-                        </div>
-                        <div class="col">
-                            <ul>
-                                <li>
-                                    @foreach ($show['artists'] as $s)
-                                    <a href="#">
-                                        {{ $s }}
-                                    </a>
-                                    @if (!$loop->last)
-                                        , 
-                                    @endif
-                                    @endforeach
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>Written by:</p>
-                        </div>
-                        <div class="col">
-                            <ul>
-                                <li>
-                                    @foreach ($show['writers'] as $s)
-                                    <a href="#">
-                                        {{ $s }}
-                                    </a>
-                                    @if (!$loop->last)
-                                        , 
-                                    @endif
-                                    @endforeach
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="specs container">
                 <h1>Specs</h1>
                 <div class="d-flex">
@@ -77,7 +34,7 @@
                             <ul>
                                 <li> 
                                     <a class="uppercase" href="#">
-                                        {{$show['series'] }}
+                                        {{ $comic->series }}
                                     </a>
                                 </li>
                             </ul>
@@ -90,7 +47,7 @@
                         <div class="col">
                             <ul>
                                 <li>
-                                    <p>{{$show['price'] }}</p>
+                                    <p>{{ $comic->price }}</p>
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +59,7 @@
                         <div class="col">
                             <ul>
                                 <li>
-                                    <p>{{$show['sale_date'] }}</p>
+                                    <p>{{ $comic->sale_date }}</p>
                                 </li>
                             </ul>
                         </div>
