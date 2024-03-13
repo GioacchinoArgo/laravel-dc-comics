@@ -7,21 +7,11 @@ Route::get('/', function () {
 })->name('home');
 
 // Lista Comics
-Route::get('/comics', function () {
-    $comics = config('comics');
-    return view('products.index', compact('comics'));
-})->name('comics');
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
 
 Route::get('/movies', function () {
     return view('movies');
 })->name('movies');
 
 // Dettaglio comics
-Route::get('/show/{index}', function ($index) {
-
-    $comics = config('comics');
-
-    $show = $comics[$index];
-
-    return view('products.show', compact('show'));
-})->name('show');
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
