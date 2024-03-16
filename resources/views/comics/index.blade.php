@@ -5,7 +5,7 @@
 @section('main-content')
 <section id="comics-list" class="upper-content">
     <div class="container">
-        <a class="create-btn" href="{{ route('comics.create')}}">Aggiungi un fumetto</a>
+        <a class="create-btn ms-4" href="{{ route('comics.create')}}">Aggiungi un fumetto</a>
     </div>
     <div class="container card-container">
         @foreach ($comics as $comic)
