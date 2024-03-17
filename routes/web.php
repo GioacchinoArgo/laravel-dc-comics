@@ -28,3 +28,6 @@ Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comi
 //# Rotta per salvare sul db il comic
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 
+//# Rotta per salvare sul db delle modifiche
+Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
+

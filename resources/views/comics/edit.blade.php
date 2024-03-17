@@ -21,8 +21,9 @@
     </div>
     @endif
     <div class="container create-comic-container">
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update', $comic->id) }}" method="POST">
             @csrf
+            @method('PUT')
             <div class="row">
                 <div class="col-6">
                     <div class="mt-3 text-center">
@@ -81,7 +82,7 @@
             </div>
             <div class="d-flex justify-content-center align-items-center pt-5 gap-4">
                 <button class="create-btn" type="reset">Svuota tutti i campi</button>
-                <button class="create-btn" type="submit">Aggiungi il fumetto</button>
+                <button class="create-btn" type="submit">Modifica</button>
             </div>
         </form>
     </div>
