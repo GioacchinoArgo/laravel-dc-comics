@@ -11,13 +11,17 @@
                 </div>
             </div>
             <div class="details">
-                <div class="info-comics">
+                <div class="info-comics mt-3">
                     <h1> {{ $comic->title}} </h1>
                     <p class="description">{{$comic->description}}</p>
                 </div>
                 <div class="banner-adv">
                     <img class="adv" src="{{ asset('img/adv.jpg') }}">
                 </div>
+            </div>
+            <div class="input-group mt-2 d-flex justify-content-between">
+                <a class="b-btn mb-2" href="{{ url("/comics/$comic->id/edit")}}">Modifica le informazioni</a>
+                <a class="b-btn mb-2" href="{{ route('comics.index')}}">Torna indietro</a>
             </div>
         </div>
     </section>
