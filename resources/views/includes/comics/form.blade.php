@@ -68,6 +68,6 @@
     </div>
     <div class="d-flex justify-content-center align-items-center pt-5 gap-4">
         <button class="create-btn" type="reset">Svuota tutti i campi</button>
-        <button class="create-btn" type="submit">Modifica</button>
+        <button class="create-btn" type="submit">Continua</button>
     </div>
 </div>

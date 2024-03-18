@@ -2,7 +2,7 @@
     <a class="create-btn ms-3" href="{{ route('comics.index')}}">Torna indietro</a>
     @if ($errors->any())
         <div class="alert alert-danger mt-5">
-            <h4>Some fields are invalid</h4>
+            <h4><strong>Errore:</strong> Alcuni campi non sono validi</h4>
             <ul class="ms-3">
                 @foreach ($errors->all() as $error)
                     <li class="ms-3">
