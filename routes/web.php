@@ -31,3 +31,5 @@ Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
 //# Rotta per salvare sul db delle modifiche
 Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
 
+//# Rotta per eliminare sul db il comic
+Route::delete('/comics/{comic}', [ComicController::class, 'destroy'])->name('comics.destroy');

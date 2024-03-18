@@ -20,7 +20,14 @@
                 </div>
             </div>
             <div class="input-group mt-2 d-flex justify-content-between">
-                <a class="b-btn mb-2" href="{{ url("/comics/$comic->id/edit")}}">Modifica le informazioni</a>
+                <div class="d-flex">
+                    <a class="b-btn mb-2" href="{{ url("/comics/$comic->id/edit")}}">Modifica le informazioni</a>
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="b-btn bg-danger ms-2 mb-2">Elimina</button>
+                    </form>
+                </div>
                 <a class="b-btn mb-2" href="{{ route('comics.index')}}">Torna indietro</a>
             </div>
         </div>
