@@ -44,7 +44,7 @@
         <div class="col-4">
             <div class="mt-3 text-center">
                 <label for="sale_date" class="form-label"><h2 class="text-white">Inserisci la data di pubblicazione</h2></label>
-                <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="YYYY/MM/DD" value="{{old('sale_date', $comic->sale_date)}}">
+                <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="YYYY-MM-DD" value="{{old('sale_date', $comic->sale_date)}}">
             </div>
         </div>
         <div class="col-3 ">
